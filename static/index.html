@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orca · Tasks</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="navbar" aria-label="Main navigation">
+          <a class="brand" href="/" aria-label="Orca home"><span aria-hidden="true">◒</span> orca</a>
+          <ul class="nav-links">
+            <li><a href="#tasks">Tasks</a></li>
+            <li><a href="/docs">API Docs</a></li>
+          </ul>
+        </nav>
+        <span class="tag">A little more focus.</span>
+      </header>
+      <section class="intro"><p class="eyebrow">MAKE ROOM FOR WHAT MATTERS</p><h1>Small steps.<br>Clearer days.</h1><p>Your next big thing starts with one small task.</p></section>
+      <section id="tasks" class="card" aria-labelledby="tasks-heading" tabindex="-1">
+        <div class="card-heading"><h2 id="tasks-heading">Your tasks</h2><span id="count" aria-live="polite">Loading…</span></div>
+        <form id="task-form">
+          <label class="sr-only" for="task-input">New task</label>
+          <input id="task-input" name="title" placeholder="What would you like to get done?" maxlength="200" required autocomplete="off">
+          <button id="add-button" type="submit">Add task <span aria-hidden="true">+</span></button>
+        </form>
+        <p id="error" role="alert" hidden></p>
+        <ul id="task-list" aria-label="Tasks"></ul>
+        <div id="empty" hidden><span aria-hidden="true">☀</span><h3>A fresh start</h3><p>Add your first task and take it one step at a time.</p></div>
+        <footer><span id="progress">A little progress goes a long way.</span><a href="/docs">API docs ↗</a></footer>
+      </section>
+      <p class="closing">Less noise. More getting things done.</p>
+    </main>
+  </body>
+</html>
