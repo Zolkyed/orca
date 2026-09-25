@@ -9,9 +9,18 @@
   </head>
   <body>
     <main>
-      <header><a class="brand" href="/">◒ orca</a><span class="tag">A little more focus.</span></header>
+      <header>
+        <nav class="navbar" aria-label="Main navigation">
+          <a class="brand" href="/" aria-label="Orca home"><span aria-hidden="true">◒</span> orca</a>
+          <ul class="nav-links">
+            <li><a href="#tasks">Tasks</a></li>
+            <li><a href="/docs">API Docs</a></li>
+          </ul>
+        </nav>
+        <span class="tag">A little more focus.</span>
+      </header>
       <section class="intro"><p class="eyebrow">MAKE ROOM FOR WHAT MATTERS</p><h1>Small steps.<br>Clearer days.</h1><p>Your next big thing starts with one small task.</p></section>
-      <section class="card" aria-labelledby="tasks-heading">
+      <section id="tasks" class="card" aria-labelledby="tasks-heading" tabindex="-1">
         <div class="card-heading"><h2 id="tasks-heading">Your tasks</h2><span id="count" aria-live="polite">Loading…</span></div>
         <form id="task-form">
           <label class="sr-only" for="task-input">New task</label>

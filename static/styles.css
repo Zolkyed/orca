@@ -2,7 +2,13 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
 main { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
-header { display: flex; align-items: center; justify-content: space-between; padding: 32px 0; border-bottom: 1px solid #dfe4dc; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 32px 0; border-bottom: 1px solid #dfe4dc; }
+.navbar { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: 12px 24px; min-width: 0; }
+.nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 12px; border-radius: 9px; color: #234d40; font-size: 14px; font-weight: 600; text-decoration: none; }
+.nav-links a:hover { background: #eef3ed; text-decoration: underline; text-underline-offset: 4px; }
+.navbar a:focus-visible { outline: 3px solid #2f604a; outline-offset: 3px; }
+#tasks { scroll-margin-top: 24px; }
 .brand { font-size: 27px; font-weight: 750; letter-spacing: -1px; text-decoration: none; color: #234d40; }
 .tag, .closing { color: #78847d; font-size: 13px; }
 .intro { margin: 65px 0 34px; }
